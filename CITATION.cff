@@ -14,7 +14,7 @@ authors:
   given-names: "Rajkumar"
 - family-names: "Kadota"
   given-names: "Igor"
-title: "FedAvg for 5G: Application, Architecure, and Analysis (fed_5g)"
+title: "Federated Learning for 5G Tesbed for 5G"
 version: 1.0.0
 date-released: 2025-04-01
-url: "https://github.com/Net-X-Research-Group/fed_5g"
+url: "https://github.com/Net-X-Research-Group/federated_learning_testbed"
