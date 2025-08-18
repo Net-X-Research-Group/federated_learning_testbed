@@ -7,7 +7,7 @@ fi
 
 
 PYTHON=python
-FED_5G_DIRECTORY="$0/../../"
+FED_5G_DIRECTORY="$0"
 
 NUM_CLIENTS=$1 # command line argument
 
