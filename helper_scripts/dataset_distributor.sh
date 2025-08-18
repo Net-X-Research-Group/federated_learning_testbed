@@ -7,7 +7,7 @@ fi
 
 
 PYTHON=python
-FED_5G_DIRECTORY="$HOME"
+FED_5G_DIRECTORY="$0/../../"
 
 NUM_CLIENTS=$1 # command line argument
 
@@ -21,7 +21,7 @@ IP_PREFIX="129.105.6."
 IP_SUFFIXES=(17 18 19 20 21 22)
 
 # Activate virtual environment
-source "$FED_5G_DIRECTORY"/fed_5g/venv/bin/activate
+source "$FED_5G_DIRECTORY"/fed_5g/latency_venv/bin/activate
 
 # Generate datasets
 $PYTHON "$PARTITIONER_SCRIPT" -d $DATASET -n "$NUM_CLIENTS" -p $STRATEGY
