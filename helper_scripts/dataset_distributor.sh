@@ -14,7 +14,7 @@ NUM_CLIENTS=$1 # command line argument
 STRATEGY=$2 # iid, shard, dirichlet
 DATASET="cifar10" # mnist, cifar10, cifar100
 
-PARTITIONER_SCRIPT="$FED_5G_DIRECTORY/fed_5g/util/dataset_partitioner.py"
+PARTITIONER_SCRIPT="fed_5g/util/dataset_partitioner.py"
 
 DEVICE_NAME_PREFIX="commnetpi0"
 IP_PREFIX="129.105.6."
