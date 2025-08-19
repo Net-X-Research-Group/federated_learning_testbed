@@ -5,23 +5,24 @@ if [ "$#" -ne 2 ]; then
     exit 1
 fi
 
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 PYTHON=python
-FED_5G_DIRECTORY=""
 
 NUM_CLIENTS=$1 # command line argument
 
 STRATEGY=$2 # iid, shard, dirichlet
 DATASET="cifar10" # mnist, cifar10, cifar100
 
-PARTITIONER_SCRIPT="fed_5g/util/dataset_partitioner.py"
+PARTITIONER_SCRIPT="${SCRIPT_DIR}/util/dataset_partitioner.py"
 
 DEVICE_NAME_PREFIX="commnetpi0"
 IP_PREFIX="129.105.6."
 IP_SUFFIXES=(17 18 19 20 21 22)
 
 # Activate virtual environment
-source "$FED_5G_DIRECTORY"/fed_5g/latency_venv/bin/activate
+source "${SCRIPT_DIR}/latency_venv/bin/activate
 
 # Generate datasets
 $PYTHON "$PARTITIONER_SCRIPT" -d $DATASET -n "$NUM_CLIENTS" -p $STRATEGY

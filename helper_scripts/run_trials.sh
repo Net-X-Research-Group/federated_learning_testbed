@@ -10,13 +10,13 @@ DIST=$2
 
 for i in $(seq 1 20);
 do
-	./dataset_distributor.sh "${N}" "${DIST}"
+	helper_scripts/dataset_distributor.sh "${N}" "${DIST}"
 	mv cifar10_"${N}"_partitions_"${DIST}".png cifar10_"${N}"_partitions_"${DIST}"_trial_"${i}".png
 	sleep 2
-	flwr run "$HOME"/fed_5g/flwr-application --stream
+	flwr run flwr-application --stream
 	sleep 2
 	#kill -9 $(pgrep tshark)
-  ./transfer_latency_measurements.sh "${N}"
+  helper_scripts/transfer_latency_measurements.sh "${N}"
 done
 
-flwr ls "$HOME"/fed_5g/flwr-application --format json > "${HOME}"/trials.json
+flwr ls flwr-application --format json > trials.json
