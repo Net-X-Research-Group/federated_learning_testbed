@@ -1,0 +1,7 @@
+services:
+  trials:
+    build: .
+    volumes:
+    - ${HOME}/experiments:/app/experiments
+    command: iid 6
+    #image: ghcr.io/net-x-research-group/fed_5g/fl-server:latest
