@@ -3,4 +3,5 @@ services:
     image: kmcomer/trials:latest
     volumes:
     - ${HOME}/experiments:/app/experiments
+    - ~/.netrc:/root/.netrc
     command: iid 6
