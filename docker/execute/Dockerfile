@@ -2,13 +2,13 @@ FROM python:3.12-slim
 
 # Set the working directory
 WORKDIR /app
-COPY ../../flwr-application /app/flwr-application
-COPY ../../helper_scripts /app/helper_scripts
-COPY ../../dist /app/dist
-COPY ../../util /app/util
+COPY flwr-application /app/flwr-application
+COPY helper_scripts /app/helper_scripts
+COPY dist /app/dist
+COPY util /app/util
 
 # Copy the requirements file into the container
-COPY ../../requirements.txt /app/
+COPY requirements.txt /app/
 RUN apt update && apt install -y \
     build-essential \
     curl
