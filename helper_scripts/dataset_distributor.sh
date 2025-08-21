@@ -22,7 +22,7 @@ IP_PREFIX="129.105.6."
 IP_SUFFIXES=(17 18 19 20 21 22)
 
 # Activate virtual environment
-source "${SCRIPT_DIR}/latency_venv/bin/activate
+source "${SCRIPT_DIR}/latency_venv/bin/activate"
 
 # Generate datasets
 $PYTHON "$PARTITIONER_SCRIPT" -d $DATASET -n "$NUM_CLIENTS" -p $STRATEGY
