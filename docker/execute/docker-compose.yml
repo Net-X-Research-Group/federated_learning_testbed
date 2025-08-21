@@ -3,5 +3,6 @@ services:
     image: kmcomer/trials:latest
     volumes:
     - ${HOME}/experiments:/app/experiments
-    - ~/.netrc:/root/.netrc
+    - ${HOME}/.netrc:/app/.netrc
     command: iid 6
+    network_mode: host
